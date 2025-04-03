@@ -10,6 +10,50 @@
     </div>
 </div>
 <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-12">
+    <div class="mdc-card py-2">
+        <div class="d-flex justify-content-between align-items-center">
+            <form method="GET" action="{% url 'employee-page' %}" class="mb-4">
+                <div class="grid grid-cols-4 gap-2">
+                    <!-- Search -->
+                    <input type="text" name="search" placeholder="Search by name or code" 
+                           value="{{ search_query }}" class="p-2 w-64 border rounded">
+            
+                    <!-- Department Filter -->
+                    <select name="department" class="p-2 w-64 border rounded">
+                        <option value="">All Departments</option>
+                        {% for dept in departments %}
+                            <option value="{{ dept.id }}" {% if department_id == dept.id|stringformat:"s" %}selected{% endif %}>
+                                {{ dept.name }}
+                            </option>
+                        {% endfor %}
+                    </select>
+            
+                    <!-- Position Filter -->
+                    <select name="position" class="p-2 w-64 border rounded">
+                        <option value="">All Positions</option>
+                        {% for pos in positions %}
+                            <option value="{{ pos.id }}" {% if position_id == pos.id|stringformat:"s" %}selected{% endif %}>
+                                {{ pos.name }}
+                            </option>
+                        {% endfor %}
+                    </select>
+            
+                    <!-- Status Filter -->
+                    <select name="status" class="p-2 w-64 border rounded">
+                        <option value="">All Statuses</option>
+                        <option value="1" {% if status == "1" %}selected{% endif %}>Active</option>
+                        <option value="0" {% if status == "0" %}selected{% endif %}>Inactive</option>
+                    </select>
+            
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn btn-primary">Filter</button>
+                    <a href="{% url 'employee-page' %}" class="btn btn-warning">Reset</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-12">
     <div class="mdc-card">
         <div class="table-responsive">
             <form method="get">

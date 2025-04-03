@@ -4,7 +4,8 @@ from employee_information.models import Department, Position, Employees
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import redirect
-from django.core.paginator import Paginator
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.db.models import Q
 import json
 employees = [
     {
@@ -171,18 +172,53 @@ def delete_position(request):
 # Employees
 def employees(request):
     employee_list = Employees.objects.all()
-    
-    # Get number of rows per page from request or set default
-    rows_per_page = request.GET.get('rows', 10)  # Default to 10 rows if not specified
-    paginator = Paginator(employee_list, rows_per_page) 
-    
-    page_number = request.GET.get('page', 1)  # Get current page number
-    page_obj = paginator.get_page(page_number)  
+
+    # Filtering Logic
+    search_query = request.GET.get('search', '')
+    department_id = request.GET.get('department', '')
+    position_id = request.GET.get('position', '')
+    status = request.GET.get('status', '')
+
+    if search_query:
+        employee_list = employee_list.filter(
+            Q(firstname__icontains=search_query) |
+            Q(lastname__icontains=search_query) |
+            Q(middlename__icontains=search_query) |
+            Q(code__icontains=search_query)
+        )
+
+    if department_id:
+        employee_list = employee_list.filter(department_id=department_id)
+
+    if position_id:
+        employee_list = employee_list.filter(position_id=position_id)
+
+    if status:
+        employee_list = employee_list.filter(status=status)
+
+    # Pagination
+    rows_per_page = int(request.GET.get('rows', 10))
+    paginator = Paginator(employee_list, rows_per_page)
+    page_number = request.GET.get('page', 1)
+
+    try:
+        page_obj = paginator.page(page_number)
+    except (PageNotAnInteger, EmptyPage):
+        page_obj = paginator.page(1)
+
+    departments = Department.objects.filter(status=1)
+    positions = Position.objects.filter(status=1)
 
     context = {
         'page_title': 'Employees',
-        'employees': page_obj,  # Paginated employee list
-        'rows_per_page': rows_per_page,  # Keep track of selected rows per page
+        'employees': page_obj,
+        'rows_per_page': rows_per_page,
+        'search_query': search_query,
+        'department_id': department_id,
+        'position_id': position_id,
+        'status': status,
+        'departments': departments,
+        'positions': positions
     }
     return render(request, 'employee_information/employees.html', context)
 @login_required
