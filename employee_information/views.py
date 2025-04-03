@@ -4,9 +4,9 @@ from employee_information.models import Department, Position, Employees
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import redirect
+from django.core.paginator import Paginator
 import json
 employees = [
-
     {
         'code':1,
         'name':"John D Smith",
@@ -171,11 +171,20 @@ def delete_position(request):
 # Employees
 def employees(request):
     employee_list = Employees.objects.all()
+    
+    # Get number of rows per page from request or set default
+    rows_per_page = request.GET.get('rows', 10)  # Default to 10 rows if not specified
+    paginator = Paginator(employee_list, rows_per_page) 
+    
+    page_number = request.GET.get('page', 1)  # Get current page number
+    page_obj = paginator.get_page(page_number)  
+
     context = {
-        'page_title':'Employees',
-        'employees':employee_list,
+        'page_title': 'Employees',
+        'employees': page_obj,  # Paginated employee list
+        'rows_per_page': rows_per_page,  # Keep track of selected rows per page
     }
-    return render(request, 'employee_information/employees.html',context)
+    return render(request, 'employee_information/employees.html', context)
 @login_required
 def manage_employees(request):
     employee = {}
