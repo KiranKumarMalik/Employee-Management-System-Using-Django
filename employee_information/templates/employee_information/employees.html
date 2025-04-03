@@ -10,16 +10,16 @@
     </div>
 </div>
 <div class="mdc-layout-grid__cell stretch-card mdc-layout-grid__cell--span-12">
-    <div class="mdc-card py-2">
+    <div class="mdc-card py-3">
         <div class="d-flex justify-content-between align-items-center">
-            <form method="GET" action="{% url 'employee-page' %}" class="mb-4">
+            <form method="GET" action="{% url 'employee-page' %}" class="mb-6 align-items-center">
                 <div class="grid grid-cols-4 gap-2">
                     <!-- Search -->
                     <input type="text" name="search" placeholder="Search by name or code" 
                            value="{{ search_query }}" class="p-2 w-64 border rounded">
             
                     <!-- Department Filter -->
-                    <select name="department" class="p-2 w-64 border rounded">
+                    <select name="department" class="p-2 w-74 border rounded">
                         <option value="">All Departments</option>
                         {% for dept in departments %}
                             <option value="{{ dept.id }}" {% if department_id == dept.id|stringformat:"s" %}selected{% endif %}>
@@ -29,7 +29,7 @@
                     </select>
             
                     <!-- Position Filter -->
-                    <select name="position" class="p-2 w-64 border rounded">
+                    <select name="position" class="p-2 w-74 border rounded">
                         <option value="">All Positions</option>
                         {% for pos in positions %}
                             <option value="{{ pos.id }}" {% if position_id == pos.id|stringformat:"s" %}selected{% endif %}>
@@ -46,8 +46,8 @@
                     </select>
             
                     <!-- Submit Button -->
-                    <button type="submit" class="btn btn-primary">Filter</button>
-                    <a href="{% url 'employee-page' %}" class="btn btn-warning">Reset</a>
+                    <button type="submit" class="btn btn-primary rounded-lg">Filter</button>
+                    <a href="{% url 'employee-page' %}" class="btn btn-warning rounded-lg">Reset</a>
                 </div>
             </form>
         </div>
