@@ -46,7 +46,7 @@
                 <tbody>
                     {% for employee in employees %}
                     <tr>
-                        <td class="px-2 py-1 text-center">{{ employee.id }}</td>
+                        <td class="px-2 py-1 text-center">{{ forloop.counter0|add:employees.start_index }}</td>
                         <td class="px-2 py-1 text-start">{{ employee.code }}</td>
                         <td class="px-2 py-1 text-start">{{ employee.firstname }} {{ employee.middlename }} {{ employee.lastname }}</td>
                         <td class="px-2 py-1 text-start">{{ employee.department_id }}</td>

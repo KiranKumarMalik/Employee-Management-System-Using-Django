@@ -25,7 +25,7 @@ class Position(models.Model):
 
 
 class Employees(models.Model):
-    code = models.CharField(max_length=100,blank=True) 
+    code = models.CharField(max_length=100,blank=True,unique= True) 
     firstname = models.TextField() 
     middlename = models.TextField(blank=True,null= True) 
     lastname = models.TextField() 
