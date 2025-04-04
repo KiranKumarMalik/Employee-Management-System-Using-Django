@@ -6,7 +6,7 @@ This is a student management system built using **Django 4**, **HTML 5**, **CSS 
 ![login](https://github.com/KiranKumarMalik/Employee-Management-System-Using-Django/blob/b19348c2e6624325009124f741b94f2a4ff7c294/ss/Screenshot%202025-04-04%20224912.png)
 
 <h3>Admin Credentials</h3>
-Username: admin
+Username: admin <br>
 Password: admin123
 
 # 2. Admin Dashboard (Number of employees, departments and positions)
