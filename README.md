@@ -2,11 +2,15 @@
 
 This is a student management system built using **Django 4**, **HTML 5**, **CSS 3**, and **Bootstrap 5** with a **Bootswatch** theme.
 
-# 1. Admin Dashboard (Number of employees, departments and positions)
-![dashboard](https://github.com/KiranKumarMalik/Employee-Management-System-Using-Django/blob/de8141aad0dcc7c3b49ccdf125940c2969e9c264/ss/Screenshot%202025-04-04%20221345.png)
+# 1. Login to admin
+![login](https://github.com/KiranKumarMalik/Employee-Management-System-Using-Django/blob/b19348c2e6624325009124f741b94f2a4ff7c294/ss/Screenshot%202025-04-04%20224912.png)
 
-# 2. Add Student
-![add](https://github.com/KiranKumarMalik/Student-Management-System-CRUD-Operation-in-Django/blob/3e57c1d328d4bf946d6173f524399d76ea8c7c42/ss/Screenshot%202025-04-01%20120019.png)
+<h3>Admin Credentials</h3>
+Username: admin
+Password: admin123
+
+# 2. Admin Dashboard (Number of employees, departments and positions)
+![dashboard](https://github.com/KiranKumarMalik/Employee-Management-System-Using-Django/blob/de8141aad0dcc7c3b49ccdf125940c2969e9c264/ss/Screenshot%202025-04-04%20221345.png)
 
 ![confirmation](https://github.com/KiranKumarMalik/Student-Management-System-CRUD-Operation-in-Django/blob/3e57c1d328d4bf946d6173f524399d76ea8c7c42/ss/Screenshot%202025-04-01%20120029.png)
 
