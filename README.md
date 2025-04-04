@@ -12,7 +12,6 @@ Password: admin123
 # 2. Admin Dashboard (Number of employees, departments and positions)
 ![dashboard](https://github.com/KiranKumarMalik/Employee-Management-System-Using-Django/blob/de8141aad0dcc7c3b49ccdf125940c2969e9c264/ss/Screenshot%202025-04-04%20221345.png)
 
-![confirmation](https://github.com/KiranKumarMalik/Student-Management-System-CRUD-Operation-in-Django/blob/3e57c1d328d4bf946d6173f524399d76ea8c7c42/ss/Screenshot%202025-04-01%20120029.png)
 
 # 3. View Student details
 ![check](https://github.com/KiranKumarMalik/Student-Management-System-CRUD-Operation-in-Django/blob/3e57c1d328d4bf946d6173f524399d76ea8c7c42/ss/Screenshot%202025-04-01%20120045.png)
