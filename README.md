@@ -1,6 +1,6 @@
-# Student Management System
+# Employee Management System
 
-This is a student management system built using **Django 4**, **HTML 5**, **CSS 3**, and **Bootstrap 5** with a **Bootswatch** theme.
+This is a Employee management system built using **Django 4**, **HTML 5**, **CSS 3**, and **Bootstrap 5**.
 
 # 1. Login to admin
 ![login](https://github.com/KiranKumarMalik/Employee-Management-System-Using-Django/blob/b19348c2e6624325009124f741b94f2a4ff7c294/ss/Screenshot%202025-04-04%20224912.png)
@@ -96,15 +96,7 @@ On Windows:
 venv\scripts\activate
 ```
 
-### 3. Install required dependencies
-
-From the **root** directory, run:
-
-```bash
-pip install -r requirements.txt
-```
-
-### 4. Run migrations
+### 3. Run migrations
 
 From the **root** directory, run:
 
@@ -115,7 +107,7 @@ python manage.py makemigrations
 python manage.py migrate
 ```
 
-### 5. Create an admin user to access the Django Admin interface
+### 4. Create an admin user to access the Django Admin interface
 
 From the **root** directory, run:
 
