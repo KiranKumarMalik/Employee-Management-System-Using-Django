@@ -12,11 +12,13 @@ Password: admin123
 # 2. Admin Dashboard (Number of employees, departments and positions)
 ![dashboard](https://github.com/KiranKumarMalik/Employee-Management-System-Using-Django/blob/de8141aad0dcc7c3b49ccdf125940c2969e9c264/ss/Screenshot%202025-04-04%20221345.png)
 
+# 3. To add department
+![dep](https://github.com/KiranKumarMalik/Employee-Management-System-Using-Django/blob/bad7a6c3dc46068ad128a041f820ee07a761a264/ss/Screenshot%202025-04-04%20221412.png)
 
-# 3. View Student details
-![check](https://github.com/KiranKumarMalik/Student-Management-System-CRUD-Operation-in-Django/blob/3e57c1d328d4bf946d6173f524399d76ea8c7c42/ss/Screenshot%202025-04-01%20120045.png)
+![add](https://github.com/KiranKumarMalik/Employee-Management-System-Using-Django/blob/bad7a6c3dc46068ad128a041f820ee07a761a264/ss/Screenshot%202025-04-04%20221516.png)
 
-![viewdetails](https://github.com/KiranKumarMalik/Student-Management-System-CRUD-Operation-in-Django/blob/3e57c1d328d4bf946d6173f524399d76ea8c7c42/ss/Screenshot%202025-04-01%20120055.png)
+![add](https://github.com/KiranKumarMalik/Employee-Management-System-Using-Django/blob/bad7a6c3dc46068ad128a041f820ee07a761a264/ss/Screenshot%202025-04-04%20221547.png)
+<center><h3>New department added successfully</h3></center>
 
 # 4. Update Student details
 ![update](https://github.com/KiranKumarMalik/Student-Management-System-CRUD-Operation-in-Django/blob/f286d41a576a3f5b1c88f214d93bf0523e97849a/ss/Screenshot%202025-04-01%20120133.png)
