@@ -36,11 +36,14 @@ Password: admin123
 ![added](https://github.com/KiranKumarMalik/Employee-Management-System-Using-Django/blob/e62f8fd696da204c12a2f00a311fa70f4cd6f2d3/ss/Screenshot%202025-04-04%20222153.png)
 <h3>New Employee added successfully</h3>
 
-# 6. Delete a student record
-![delete](https://github.com/KiranKumarMalik/Student-Management-System-CRUD-Operation-in-Django/blob/ecff906eb307f6a337aa0289882fc4bde8d72977/ss/Screenshot%202025-04-01%20120229.png)
+# 6. To view a particular employee details
+![view](https://github.com/KiranKumarMalik/Employee-Management-System-Using-Django/blob/6f8fe7ec8266f96ce784d45234612ce250ca3275/ss/Screenshot%202025-04-04%20222215.png)
 
-# 7. Check student table
-![checkstudent](https://github.com/KiranKumarMalik/Student-Management-System-CRUD-Operation-in-Django/blob/ecff906eb307f6a337aa0289882fc4bde8d72977/ss/Screenshot%202025-04-01%20120242.png)
+# 7. To edit a particular employee details
+![edit](https://github.com/KiranKumarMalik/Employee-Management-System-Using-Django/blob/6f8fe7ec8266f96ce784d45234612ce250ca3275/ss/Screenshot%202025-04-04%20222239.png)
+
+![editsuccess](https://github.com/KiranKumarMalik/Employee-Management-System-Using-Django/blob/6f8fe7ec8266f96ce784d45234612ce250ca3275/ss/Screenshot%202025-04-04%20222328.png)
+<h3>Updated successfully</h3>
 
 # 8. Filter the data
 ![filter](https://github.com/KiranKumarMalik/Student-Management-System-CRUD-Operation-in-Django/blob/317054dcc7ff4d058f14e21ec9003ce8bfc5fc4e/ss/Screenshot%202025-04-01%20114941.png)
